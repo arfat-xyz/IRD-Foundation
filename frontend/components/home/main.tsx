@@ -5,7 +5,6 @@ import SingleDuaComponent from "./single-dua";
 
 const MainComponent = () => {
   const { currentCategory } = useSidebarStore();
-  console.log({ currentCategory });
   return (
     <main className="overflow-y-auto scrollbar lg:col-span-8 2xl:col-span-8 h-[calc(100vh-100px)]">
       {/* breadcrumb */}
