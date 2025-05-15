@@ -17,12 +17,6 @@ const SingleDuaComponent = ({ dua }: { dua: IDua }) => {
     showTranslation,
     showTransliteration,
     showReference,
-    setArabicFontSize,
-    setTranslationFontSize,
-    toggleArabic,
-    toggleTranslation,
-    toggleTransliteration,
-    toggleReference,
   } = useSettingsStore();
   const duaRef = useRef<HTMLDivElement>(null);
 
@@ -47,7 +41,7 @@ const SingleDuaComponent = ({ dua }: { dua: IDua }) => {
   return (
     <div
       ref={duaRef}
-      className={`main-all-sub-section border-b-1 shadow-sm last:border-b-0 ${
+      className={`main-all-sub-section border-b-1 shadow-sm border-[#839185] last:border-b-0 ${
         duaId === dua.dua_id ? "bg-gray-50" : ""
       }`}
       id={`dua-${dua.dua_id}`}
@@ -66,7 +60,7 @@ const SingleDuaComponent = ({ dua }: { dua: IDua }) => {
 
         {dua?.dua_arabic && showArabic ? (
           <div
-            className={`font-normal  text-textPrimary text-right my-7.5`}
+            className={`font-normal  text-textPrimary dark:text-white  text-right my-7.5`}
             style={{
               fontSize: `${arabicFontSize}px`,
             }}
@@ -80,7 +74,7 @@ const SingleDuaComponent = ({ dua }: { dua: IDua }) => {
         {dua?.transliteration_en &&
         dua?.transliteration_bn &&
         showTransliteration ? (
-          <div className="text-textSubtitle mb-6">
+          <div className="text-textSubtitle  dark:text-[#839185] mb-6">
             <p className="italic text-base">
               {selectedLanguage === "en"
                 ? dua?.transliteration_en
@@ -92,7 +86,7 @@ const SingleDuaComponent = ({ dua }: { dua: IDua }) => {
         )}
 
         {dua?.translation_bn && dua?.translation_en && showTranslation ? (
-          <div className="text-textPrimary">
+          <div className="text-textPrimary  dark:text-white">
             <strong className="mb-2">
               {selectedLanguage === "en" ? "Translation" : "অনুবাদ"}
             </strong>
@@ -114,10 +108,10 @@ const SingleDuaComponent = ({ dua }: { dua: IDua }) => {
         <div className="mt-[50px] flex items-center justify-between">
           {dua?.refference_bn && dua?.refference_en && showReference ? (
             <div className="text-sm">
-              <span className="text-textSubtitle font-normal mb-2">
+              <span className="text-textSubtitle  dark:text-[#839185] font-normal mb-2">
                 {selectedLanguage === "en" ? "Reference" : "রেফারেন্স"}
               </span>
-              <p className="text-textPrimary">
+              <p className="text-textPrimary  dark:text-white">
                 {selectedLanguage === "en"
                   ? dua?.refference_en
                   : dua?.refference_bn}

@@ -8,6 +8,10 @@ const sidebarIcons: {
   href: string;
 }[] = [
   {
+    iconName: "homeIcon",
+    href: "#",
+  },
+  {
     iconName: "duaCatIcon",
     href: "/",
   },
@@ -35,7 +39,7 @@ const sidebarIcons: {
 const LogoSidebar = () => {
   const pathName = usePathname();
   return (
-    <div className="hidden p-3 h-screen lg:sticky top-0 left-0 lg:grid grid-rows-[50px_1fr]">
+    <div className="hidden dark:bg-[#1f231f] p-3 h-screen lg:sticky top-0 left-0 lg:grid grid-rows-[50px_1fr]">
       <Icons.logoIcon className="size-11 text-primary" />
       <div className=" h-full flex flex-col gap-6 justify-center items-center">
         {sidebarIcons.map((info, i) => {
@@ -44,7 +48,9 @@ const LogoSidebar = () => {
             <Link href={info.href} key={i}>
               <SideBarIcon
                 className={`size-11 p-2 text-[#417360] ${
-                  pathName === info.href ? "bg-[#D8E7D3] rounded-10" : ""
+                  pathName === info.href
+                    ? "bg-[#D8E7D3] dark:bg-primary/40 rounded-10"
+                    : ""
                 }`}
               />
             </Link>

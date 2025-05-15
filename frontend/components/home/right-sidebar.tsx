@@ -4,9 +4,11 @@ import { Icons } from "../icons";
 import { useUIStore } from "@/lib/zustand/ui-store";
 import LanguageSelect from "../navbar/language-select";
 import { useSettingsStore } from "@/lib/zustand/settings-store";
+import { useTheme } from "next-themes";
 
 const RightSidebar = () => {
   const { showRightSidebar, toggleSidebar } = useUIStore();
+  const { setTheme, resolvedTheme } = useTheme();
   const [selectedTab, setSelectedTab] = useState<
     "font" | "view" | "appearance" | "language"
   >("font");
@@ -30,7 +32,7 @@ const RightSidebar = () => {
         showRightSidebar ? "right-0" : "-right-full md:-right-[60%]"
       }`}
     >
-      <div className="p-6 h-full bg-white rounded-l-lg 2xl:rounded-none overflow-y-auto">
+      <div className="p-6 h-full bg-white dark:bg-black rounded-l-lg 2xl:rounded-none overflow-y-auto">
         <div className="flex justify-between items-center 2xl:hidden">
           <p className="flex items-center gap-3 w-full text-heading-6 font-bold">
             <Icons.gearIcon />
@@ -53,13 +55,19 @@ const RightSidebar = () => {
             <button
               type="button"
               onClick={() => setSelectedTab("font")}
-              className="py-2.5 w-full flex items-center hover:bg-gray-50 rounded-lg transition-colors"
+              className="py-2.5 w-full flex items-center hover:bg-gray-50  dark:hover:bg-black rounded-lg transition-colors"
             >
               <div className="grow flex gap-2 items-center">
-                <div className="bg-shadeColor1 rounded-full p-2">
+                <div className="bg-shadeColor1 dark:bg-primary/40 rounded-full p-2">
                   <Icons.fontIcon className="size-4.5" />
                 </div>
-                <span className="font-medium">Font Settings</span>
+                <span
+                  className={`font-medium ${
+                    selectedTab === "font" ? "text-primary font-bold" : ""
+                  } `}
+                >
+                  Font Settings
+                </span>
               </div>
               <Icons.arrowDownIcon
                 className={`transition-all duration-300 ${
@@ -145,13 +153,19 @@ const RightSidebar = () => {
             <button
               type="button"
               onClick={() => setSelectedTab("view")}
-              className="py-2.5 w-full flex items-center hover:bg-gray-50 rounded-lg transition-colors"
+              className="py-2.5 w-full flex items-center hover:bg-gray-50 dark:hover:bg-black rounded-lg transition-colors"
             >
               <div className="grow flex gap-2 items-center">
-                <div className="bg-shadeColor1 rounded-full p-2">
+                <div className="bg-shadeColor1 dark:bg-primary/40 rounded-full p-2">
                   <Icons.copySuccessIcon className="size-4.5" />
                 </div>
-                <span className="font-medium">View Settings</span>
+                <span
+                  className={`font-medium ${
+                    selectedTab === "view" ? "text-primary font-bold" : ""
+                  } `}
+                >
+                  View Settings
+                </span>
               </div>
               <Icons.arrowDownIcon
                 className={`transition-all duration-300 ${
@@ -258,13 +272,19 @@ const RightSidebar = () => {
             <button
               type="button"
               onClick={() => setSelectedTab("appearance")}
-              className="py-2.5 w-full flex items-center hover:bg-gray-50 rounded-lg transition-colors"
+              className="py-2.5 w-full flex items-center hover:bg-gray-50 dark:hover:bg-black rounded-lg transition-colors"
             >
               <div className="grow flex gap-2 items-center">
-                <div className="bg-shadeColor1 rounded-full p-2">
+                <div className="bg-shadeColor1 dark:bg-primary/40 rounded-full p-2">
                   <Icons.colorSwatchIcon className="size-4.5 text-primary" />
                 </div>
-                <span className="font-medium">Appearance</span>
+                <span
+                  className={`font-medium ${
+                    selectedTab === "appearance" ? "text-primary font-bold" : ""
+                  } `}
+                >
+                  Appearance
+                </span>
               </div>
               <Icons.arrowDownIcon
                 className={`transition-all duration-300 ${
@@ -273,16 +293,49 @@ const RightSidebar = () => {
               />
             </button>
             <div
-              className={`overflow-hidden transition-all duration-300 ease-in-out ${
+              className={`overflow-hidden transition-all  duration-300 ease-in-out ${
                 selectedTab === "appearance"
                   ? "max-h-[9999px] opacity-100 py-2 px-2"
                   : "max-h-0 opacity-0"
               }`}
             >
-              <div className="space-y-3">
-                <p>Theme Colors</p>
-                <p>Accent Colors</p>
-                <p>UI Element Styling</p>
+              <div className=" flex justify-between items-center p-2 gap-2">
+                {[
+                  {
+                    theme: "light",
+                    Icon: Icons.lightThemeIcon,
+                    label: "Light",
+                  },
+                  { theme: "dark", Icon: Icons.darkThemeIcon, label: "Dark" },
+                  {
+                    theme: "system",
+                    Icon: Icons.systemThemeIcon,
+                    label: "System",
+                  },
+                ].map(({ theme, Icon, label }) => (
+                  <button
+                    key={theme}
+                    type="button"
+                    className="flex flex-col items-center justify-center p-2 rounded transition-colors"
+                    onClick={() => setTheme(theme)}
+                  >
+                    <div
+                      className={`border-1 rounded-lg overflow-hidden
+                      ${
+                        typeof window === "undefined"
+                          ? "border-transparent"
+                          : resolvedTheme === theme
+                          ? "border-primary"
+                          : "border-transparent"
+                      }
+                      
+                      `}
+                    >
+                      <Icon className="size-9" />
+                    </div>
+                    <span className="text-xs mt-1">{label}</span>
+                  </button>
+                ))}
               </div>
             </div>
           </div>

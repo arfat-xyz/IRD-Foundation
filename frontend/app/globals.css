@@ -29,6 +29,36 @@ body {
     text-wrap: balance;
   }
 }
+@layer utilities {
+  .scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: theme("colors.primary") transparent;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-full hover:bg-primary/90 active:bg-primary/80;
+  }
+
+  /* Remove scrollbar arrows */
+  .scrollbar::-webkit-scrollbar-button {
+    @apply hidden;
+  }
+
+  /* Firefox support */
+  @supports (scrollbar-color: auto) {
+    .scrollbar {
+      scrollbar-color: theme("colors.primary") transparent;
+    }
+  }
+}
 /* In your global CSS */
 .custom-dash {
   border-top: 2px dashed;

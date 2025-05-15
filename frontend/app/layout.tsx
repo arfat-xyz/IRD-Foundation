@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { Toaster } from "react-hot-toast";
 import "./globals.css";
 import LayoutClientComponent from "@/components/layout-client-component";
+import ProvidersComponent from "@/components/providers";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -28,10 +29,13 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} dark:bg-black dark:text-white antialiased`}
+        suppressHydrationWarning
       >
-        <LayoutClientComponent>{children}</LayoutClientComponent>
-        <Toaster />
+        <ProvidersComponent>
+          <LayoutClientComponent>{children}</LayoutClientComponent>
+          <Toaster />
+        </ProvidersComponent>
       </body>
     </html>
   );

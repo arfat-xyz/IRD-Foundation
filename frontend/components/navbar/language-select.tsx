@@ -21,13 +21,13 @@ const LanguageSelect = ({ className }: { className: string }) => {
   const { selectedLanguage, setLanguage } = useLanguageStore();
 
   return (
-    <div className={`relative inline-block ${className}`}>
+    <div className={`relative inline-block  ${className}`}>
       <select
         name="language-selector"
         id="language-selector"
         value={selectedLanguage}
         onChange={(e) => setLanguage(e.target.value as LanguageCode)}
-        className="block appearance-none w-full bg-shadeColor1/60 text-4.5 lg:text-5.5 rounded-30 py-3 px-3 pr-8 leading-tight focus:outline-none focus:border-gray-500 language-selector"
+        className="block appearance-none w-full bg-shadeColor1/60 dark:dark:bg-gray-800 text-4.5 lg:text-5.5 rounded-30 py-3 px-3 pr-8 leading-tight focus:outline-none focus:border-gray-500 language-selector"
         style={{
           backgroundImage: `url(${languages[selectedLanguage].flag})`,
           backgroundRepeat: "no-repeat",

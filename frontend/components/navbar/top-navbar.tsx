@@ -7,14 +7,14 @@ const TopNavbar = () => {
   const { toggleSidebar, setShowSearchModal } = useUIStore();
 
   return (
-    <header className="sticky top-0 z-40 w-full bg-white border-b border-gray-200 shadow-sm">
+    <header className="sticky top-0 z-40 w-full dark:bg-black  bg-white border-b border-gray-200 dark:border-gray-800 shadow-sm">
       <div className="flex justify-between items-center px-4 py-3 sm:px-6">
         {/* Left Section - Logo & Mobile Menu */}
         <div className="flex items-center gap-2 sm:gap-3">
           <button
             aria-label="Toggle left sidebar"
             type="button"
-            className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors lg:hidden"
+            className="p-2 rounded-full   bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-200  transition-colors lg:hidden"
             onClick={() => toggleSidebar("left")}
           >
             <Icons.hamburgerIcon className="text-primary w-6 h-6" />
@@ -26,7 +26,7 @@ const TopNavbar = () => {
               <span className="text-primary font-normal">&</span>
               <span>Ruqyah</span>
             </h1>
-            <p className="hidden sm:block text-xs font-medium sm:text-sm text-gray-600">
+            <p className="hidden sm:block text-xs font-medium sm:text-sm text-gray-600 dark:text-white">
               Hisnul Muslim
             </p>
           </div>
@@ -37,7 +37,7 @@ const TopNavbar = () => {
           <button
             aria-label="Search"
             type="button"
-            className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors "
+            className="p-2 rounded-full bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-200 transition-colors "
             onClick={() => setShowSearchModal(true)}
           >
             <Icons.searchNormalIcon className="text-primary w-5 h-5" />
@@ -47,7 +47,7 @@ const TopNavbar = () => {
           <button
             aria-label="Change theme"
             type="button"
-            className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors"
+            className="p-2 rounded-full  bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-200  transition-colors"
           >
             <Icons.colorSwatchIcon className="text-gray-600 w-5 h-5" />
           </button>
@@ -68,7 +68,7 @@ const TopNavbar = () => {
           <button
             aria-label="Toggle right sidebar"
             type="button"
-            className="p-2 rounded-full bg-gray-100 hover:bg-gray-200 transition-colors 2xl:hidden"
+            className="p-2 rounded-full   bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 hover:bg-gray-200  transition-colors 2xl:hidden"
             onClick={() => toggleSidebar("right")}
           >
             <Icons.gearIcon className="text-gray-600 w-5 h-5" />

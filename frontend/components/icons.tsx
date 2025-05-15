@@ -1281,10 +1281,10 @@ const rawSVGElements: React.ReactElement[] = [
     <path
       d="M5.19751 11.62L9.00084 7.81666C9.45001 7.3675 9.45001 6.6325 9.00084 6.18333L5.19751 2.38"
       stroke="currentColor"
-      stroke-width="1.5"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>,
   <svg
@@ -1298,10 +1298,10 @@ const rawSVGElements: React.ReactElement[] = [
     <path
       d="M3.33203 10.0008V7.03414C3.33203 3.35081 5.94036 1.84247 9.13203 3.68414L11.707 5.16747L14.282 6.65081C17.4737 8.49247 17.4737 11.5091 14.282 13.3508L11.707 14.8341L9.13203 16.3175C5.94036 18.1591 3.33203 16.6508 3.33203 12.9675V10.0008Z"
       stroke="currentColor"
-      stroke-width="1.5"
-      stroke-miterlimit="10"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="1.5"
+      strokeMiterlimit="10"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     ></path>
   </svg>,
   <svg
@@ -1312,23 +1312,23 @@ const rawSVGElements: React.ReactElement[] = [
     viewBox="0 0 18 18"
     fill="none"
   >
-    <g clip-path="url(#clip0_825_161387)">
+    <g clipPath="url(#clip0_825_161387)">
       <path
         d="M6.75 11.25C6.75 9.1287 6.75 8.06805 7.40901 7.40901C8.06805 6.75 9.1287 6.75 11.25 6.75H12C14.1213 6.75 15.1819 6.75 15.841 7.40901C16.5 8.06805 16.5 9.1287 16.5 11.25V12C16.5 14.1213 16.5 15.1819 15.841 15.841C15.1819 16.5 14.1213 16.5 12 16.5H11.25C9.1287 16.5 8.06805 16.5 7.40901 15.841C6.75 15.1819 6.75 14.1213 6.75 12V11.25Z"
         stroke="currentColor"
-        stroke-width="1.2"
+        strokeWidth="1.2"
       ></path>
       <path
         d="M12.7499 6.75C12.7481 4.53218 12.7146 3.38341 12.069 2.59682C11.9443 2.44492 11.8051 2.30563 11.6532 2.18097C10.8234 1.5 9.59062 1.5 7.125 1.5C4.65939 1.5 3.42658 1.5 2.59682 2.18097C2.44492 2.30563 2.30563 2.44492 2.18097 2.59682C1.5 3.42658 1.5 4.65939 1.5 7.125C1.5 9.59062 1.5 10.8234 2.18097 11.6532C2.30563 11.8051 2.44492 11.9443 2.59682 12.069C3.38341 12.7146 4.53218 12.7481 6.75 12.7499"
         stroke="currentColor"
-        stroke-width="1.2"
+        strokeWidth="1.2"
       ></path>
     </g>
   </svg>,
   <svg key="shareIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23 23">
-    <g fill="none" stroke="currentColor" stroke-width="1.5">
+    <g fill="none" stroke="currentColor" strokeWidth="1.5">
       <path d="M9 12a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0Z"></path>
-      <path stroke-linecap="round" d="M14 6.5L9 10m5 7.5L9 14"></path>
+      <path strokeLinecap="round" d="M14 6.5L9 10m5 7.5L9 14"></path>
       <path d="M19 18.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0Zm0-13a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0Z"></path>
     </g>
   </svg>,
@@ -1343,19 +1343,19 @@ const rawSVGElements: React.ReactElement[] = [
       d="M7.5 4.07031C7.5 3.24531 8.175 2.57031 9 2.57031C9.825 2.57031 10.5 3.24531 10.5 4.07031C10.5 4.89531 9.825 5.57031 9 5.57031C8.175 5.57031 7.5 4.89531 7.5 4.07031Z"
       fill="currentColor"
       stroke="currentColor"
-      stroke-width="1"
+      strokeWidth="1"
     ></path>
     <path
       d="M7.5 14.5703C7.5 13.7453 8.175 13.0703 9 13.0703C9.825 13.0703 10.5 13.7453 10.5 14.5703C10.5 15.3953 9.825 16.0703 9 16.0703C8.175 16.0703 7.5 15.3953 7.5 14.5703Z"
       fill="currentColor"
       stroke="currentColor"
-      stroke-width="1"
+      strokeWidth="1"
     ></path>
     <path
       d="M7.5 9.32031C7.5 8.49531 8.175 7.82031 9 7.82031C9.825 7.82031 10.5 8.49531 10.5 9.32031C10.5 10.1453 9.825 10.8203 9 10.8203C8.175 10.8203 7.5 10.1453 7.5 9.32031Z"
       fill="currentColor"
       stroke="currentColor"
-      stroke-width="1"
+      strokeWidth="1"
     ></path>
   </svg>,
   <svg
@@ -1386,45 +1386,45 @@ const rawSVGElements: React.ReactElement[] = [
     <path
       d="M1.49255 4.4475V3.315C1.49255 2.55 2.11505 1.9275 2.88005 1.9275H12.5701C13.3351 1.9275 13.9576 2.55 13.9576 3.315V4.4475"
       stroke="#417360"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M7.72498 13.575V2.49"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <path
       d="M5.17505 13.575H9.36005"
       stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
     <g opacity="0.4">
       <path
         d="M10.2598 7.75488H15.5173C16.0648 7.75488 16.5073 8.19738 16.5073 8.74488V9.34488"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M12.0601 16.0726V8.15259"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M10.4546 16.0723H13.6646"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </g>
   </svg>,
@@ -1445,6 +1445,177 @@ const rawSVGElements: React.ReactElement[] = [
       d="M8.325 6H5.175C2.55 6 1.5 7.05 1.5 9.675V12.825C1.5 15.45 2.55 16.5 5.175 16.5H8.325C10.95 16.5 12 15.45 12 12.825V9.675C12 7.05 10.95 6 8.325 6ZM9.2175 10.2375L6.435 13.02C6.33 13.125 6.195 13.1775 6.0525 13.1775C5.91 13.1775 5.775 13.125 5.67 13.02L4.275 11.625C4.065 11.415 4.065 11.0775 4.275 10.8675C4.485 10.6575 4.8225 10.6575 5.0325 10.8675L6.045 11.88L8.4525 9.4725C8.6625 9.2625 9 9.2625 9.21 9.4725C9.42 9.6825 9.4275 10.0275 9.2175 10.2375Z"
       fill="#709484"
     />
+  </svg>,
+  <svg
+    key="lightThemeIcon"
+    viewBox="0 0 126 110"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect width="126" height="110" rx="16" fill="#D8E7D3"></rect>
+    <rect
+      x="10"
+      y="10"
+      width="106"
+      height="15"
+      rx="7.5"
+      fill="#41736030"
+    ></rect>
+    <rect x="15" y="15" width="20" height="5" rx="2.5" fill="#417360"></rect>
+    <rect
+      x="10"
+      y="30"
+      width="106"
+      height="15"
+      rx="7.5"
+      fill="#FBFFFB50"
+    ></rect>
+    <rect
+      x="10"
+      y="50"
+      width="106"
+      height="15"
+      rx="7.5"
+      fill="#FBFFFB50"
+    ></rect>
+    <rect
+      x="10"
+      y="70"
+      width="42.8333"
+      height="30"
+      rx="5"
+      fill="#FBFFFB50"
+    ></rect>
+    <rect
+      x="57.8334"
+      y="70"
+      width="42.8333"
+      height="30"
+      rx="5"
+      fill="#FBFFFB50"
+    ></rect>
+    <rect
+      x="62.7728"
+      y="87.4463"
+      width="32.8613"
+      height="6.01172"
+      rx="3.00586"
+      fill="#417360"
+    ></rect>
+  </svg>,
+  <svg
+    key={"darkThemeIcon"}
+    viewBox="0 0 126 110"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect width="126" height="110" rx="16" fill="#161D18"></rect>
+    <rect
+      x="10"
+      y="10"
+      width="106"
+      height="15"
+      rx="7.5"
+      fill="#41736030"
+    ></rect>
+    <rect x="15" y="15" width="20" height="5" rx="2.5" fill="#417360"></rect>
+    <rect
+      x="10"
+      y="30"
+      width="106"
+      height="15"
+      rx="7.5"
+      fill="#FBFFFB50"
+    ></rect>
+    <rect
+      x="10"
+      y="50"
+      width="106"
+      height="15"
+      rx="7.5"
+      fill="#FBFFFB50"
+    ></rect>
+    <rect
+      x="10"
+      y="70"
+      width="42.8333"
+      height="30"
+      rx="5"
+      fill="#FBFFFB50"
+    ></rect>
+    <rect
+      x="57.8334"
+      y="70"
+      width="42.8333"
+      height="30"
+      rx="5"
+      fill="#FBFFFB50"
+    ></rect>
+    <rect
+      x="62.7728"
+      y="87.4463"
+      width="32.8613"
+      height="6.01172"
+      rx="3.00586"
+      fill="#417360"
+    ></rect>
+  </svg>,
+  <svg
+    key="systemThemeIcon"
+    viewBox="0 0 126 110"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <rect width="126" height="110" rx="16" fill="#D8E7D3"></rect>
+    <rect
+      x="10"
+      y="10"
+      width="106"
+      height="15"
+      rx="7.5"
+      fill="#41736030"
+    ></rect>
+    <rect x="15" y="15" width="20" height="5" rx="2.5" fill="#417360"></rect>
+    <rect
+      x="10"
+      y="30"
+      width="106"
+      height="15"
+      rx="7.5"
+      fill="#FBFFFB50"
+    ></rect>
+    <rect
+      x="10"
+      y="50"
+      width="106"
+      height="15"
+      rx="7.5"
+      fill="#FBFFFB50"
+    ></rect>
+    <rect
+      x="10"
+      y="70"
+      width="42.8333"
+      height="30"
+      rx="5"
+      fill="#FBFFFB50"
+    ></rect>
+    <rect
+      x="57.8334"
+      y="70"
+      width="42.8333"
+      height="30"
+      rx="5"
+      fill="#FBFFFB50"
+    ></rect>
+    <rect
+      x="62.7728"
+      y="87.4463"
+      width="32.8613"
+      height="6.01172"
+      rx="3.00586"
+      fill="#417360"
+    ></rect>
   </svg>,
 ];
 

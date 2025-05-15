@@ -7,9 +7,9 @@ const MainComponent = () => {
   const { currentCategory } = useSidebarStore();
   console.log({ currentCategory });
   return (
-    <main className="overflow-y-auto lg:col-span-8 2xl:col-span-8 h-[calc(100vh-100px)]">
+    <main className="overflow-y-auto scrollbar lg:col-span-8 2xl:col-span-8 h-[calc(100vh-100px)]">
       {/* breadcrumb */}
-      <div className="main-all-sub-section bg-primary/10 text-iconColor flex flex-row gap-2 items-center shadow-sm">
+      <div className="main-all-sub-section bg-primary/10 dark:bg-[#2c352c66] text-iconColor flex flex-row gap-2 items-center shadow-sm">
         <Icons.homeIcon className="size-4.5" />
 
         <span>Home</span>
@@ -21,7 +21,7 @@ const MainComponent = () => {
       </div>
       {currentCategory?.subcategories.map((subCat) => (
         <div key={subCat?.subcat_id} className="">
-          <div className="main-all-sub-section text-iconColor py-6 bg-shadeColor2">
+          <div className="main-all-sub-section text-iconColor py-6 bg-shadeColor2 dark:bg-[#2c352c52]">
             <strong>Section:</strong>
             {currentCategory?.subcategories[0].subcat_name_en}
           </div>

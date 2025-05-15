@@ -27,7 +27,7 @@ const LeftSidebar = () => {
   }, [searchTerm, debouncedSearch]);
   return (
     <aside
-      className={`text-left fixed lg:sticky lg:z-0 z-50 top-0 h-screen lg:max-h-[calc(100vh-100px)] lg:overflow-y-auto w-full md:w-3/5 lg:w-full transition-all duration-300 lg:col-span-4 2xl:col-span-2 ${
+      className={`text-left fixed lg:sticky lg:z-0 z-50 top-0 h-screen bg-white dark:bg-black overflow-auto scrollbar lg:max-h-[calc(100vh-100px)] lg:overflow-y-auto w-full md:w-3/5 lg:w-full transition-all duration-300 lg:col-span-4 2xl:col-span-2 ${
         showLeftSidebar ? "left-0" : "-left-full md:-left-[60%]"
       }`}
     >
@@ -56,7 +56,7 @@ const LeftSidebar = () => {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder="Search by Dua Categories"
-            className="rounded-30 pl-10 w-full bg-shadeColor1/40 border-2 border-shadeColor1 text-sm py-3 focus:outline-none focus:ring-0 focus:border-none"
+            className="rounded-30 pl-10 w-full bg-shadeColor1/40 dark:bg-black border-2 dark:border-gray-400 border-shadeColor1 text-sm py-3 focus:outline-none focus:ring-0 focus:border-none"
           />
           <label
             htmlFor="categorySearch"
@@ -82,7 +82,7 @@ const LeftSidebar = () => {
                         setShowDuasList(null);
                       }}
                     >
-                      <div className="p-2 rounded-lg bg-shadeColor1">
+                      <div className="p-2 rounded-lg bg-shadeColor1 dark:bg-primary/40">
                         <CategoryIcon className="size-8" />
                       </div>
                       <div className="text-left flex flex-col">
@@ -97,7 +97,7 @@ const LeftSidebar = () => {
                       <ul
                         className={`overflow-hidden transition-all duration-300 ease-in-out ${
                           showSubCategories === mainCat?.cat_id
-                            ? "max-h-[9999px] opacity-100 py-2 border-l-1 border-dashed border-black"
+                            ? "max-h-[9999px] opacity-100 py-2 border-l-1 border-dashed border-black dark:border-white"
                             : "max-h-0 opacity-0"
                         }`}
                       >
@@ -112,8 +112,8 @@ const LeftSidebar = () => {
                                     : subCat?.subcat_id
                                 )
                               }
-                              className={`w-full text-left ps-7 text-sm text-primary px-2.5 py-1.5 relative before:absolute 
-                              before:top-1/2 before:left-0 before:border-black before:border-t-1 
+                              className={`w-full text-left ps-7 text-sm text-primary dark:text-white px-2.5 py-1.5 relative before:absolute 
+                              before:top-1/2 before:left-0 before:border-black dark:before:border-white before:border-t-1 
                               before:border-dashed before:w-4 before:h-1
                               ${
                                 subCat?.subcat_id === showDuasList
@@ -140,7 +140,7 @@ const LeftSidebar = () => {
                                       <button
                                         type="button"
                                         key={k}
-                                        className="ps-7 flex gap-2.5 items-start text-sm text-left  text-textPrimary"
+                                        className="ps-7 flex gap-2.5 items-start text-sm text-left  text-textPrimary dark:text-white"
                                         onClick={() => setDuaId(dua?.dua_id)}
                                       >
                                         <Icons.duaListArrowIndicatorIcon className="size-6 " />{" "}
